@@ -2,7 +2,7 @@
   <section class="posts-edit">
     <form @submit.prevent="updatePost()">
       <h3 class="title">
-        Edit post
+        Editar Post
       </h3>
 
       <select

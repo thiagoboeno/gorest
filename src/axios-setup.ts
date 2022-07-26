@@ -10,7 +10,18 @@ const axiosSetup = axios.create({
 axiosSetup.interceptors.response.use(
   response => response,
   error => {
-    window.location.href = '/error'
+    switch (error.response.status) {
+      case 400:
+      case 401:
+      case 403:
+      case 404:
+      case 500:
+        window.location.href = '/error'
+        break
+
+      default:
+        break
+    }
 
     return Promise.reject(error)
   }

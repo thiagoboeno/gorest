@@ -2,7 +2,7 @@
   <section class="posts-create">
     <form @submit.prevent="createPost()">
       <h2 class="title">
-        Edit post
+        Criar Post
       </h2>
 
       <select
