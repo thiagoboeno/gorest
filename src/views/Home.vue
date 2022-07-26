@@ -1,18 +1,53 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <section class="posts-grid">
+    <card
+      v-for="(item, index) in posts"
+      :key="index"
+      :post="item"
+    />
+  </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+import { defineComponent, onMounted, ref } from 'vue'
+import axios from '@/axios-setup'
+import Card from '@/components/Card.vue'
+
+type Posts = {
+  id: number
+  // eslint-disable-next-line camelcase
+  user_id: number
+  title: string
+  body: string
+}
+
+const posts = ref<Posts[]>([])
 
 export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld
+    Card
+  },
+
+  setup () {
+    const getPosts = async () => {
+      await axios.get('/posts')
+        .then(({ data }) => {
+          posts.value = data
+        })
+    }
+
+    onMounted(() => {
+      getPosts()
+    })
+
+    return {
+      posts
+    }
   }
 })
 </script>
+
+<style scoped lang="scss">
+  @import "@/assets/pages/home.scss";
+</style>

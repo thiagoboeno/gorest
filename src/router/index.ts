@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home.vue'
+import NotFound from '@/views/NotFound.vue'
+import Error from '@/views/Error.vue'
+import PostView from '@/views/post/View.vue'
+import PostCreate from '@/views/post/Create.vue'
+import PostEdit from '@/views/post/Edit.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -8,12 +13,29 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/error',
+    name: 'Error',
+    component: Error
+  },
+  {
+    path: '/posts/:id',
+    name: 'PostView',
+    component: PostView
+  },
+  {
+    path: '/posts/create',
+    name: 'PostCreate',
+    component: PostCreate
+  },
+  {
+    path: '/posts/:id/edit',
+    name: 'PostEdit',
+    component: PostEdit
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 

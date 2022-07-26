@@ -1,0 +1,13 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font: {
+      size: 120px;
+      weight: bold;
+    };
+  }
+}

@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #313638;
+
+  a {
+    text-decoration: none;
+
+    .brand {
+      margin: 0;
+      font-size: 32px;
+      color: white;
+    }
+  }
+
+  .navigation {
+    a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #E8E9EB;
+      background-color: transparent;
+      border: 2px solid #E8E9EB;
+      outline: none;
+  
+      &:hover {
+        color: black;
+        background-color: #E8E9EB;
+      }
+    }
+  }
+}

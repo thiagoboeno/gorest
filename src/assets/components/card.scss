@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+  background-color: #E8E9EB;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 20%);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  &-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #313638;
+
+    .title {
+      display: -webkit-box;
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-body {
+    padding-top: 20px;
+
+    .details {
+      .user-name {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}

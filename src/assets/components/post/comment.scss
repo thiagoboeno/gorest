@@ -1,0 +1,56 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .details {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+        color: black;
+        font-weight: bold;
+        border-radius: 50%;
+        border: 2px solid black;
+      }
+    }
+
+    .delete {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #F06543;
+      background-color: transparent;
+      border: 2px solid #F06543;
+      outline: none;
+      cursor: pointer;
+  
+      &:hover {
+        color: white;
+        background-color: #F06543;
+      }
+    }
+  }
+
+  .content {  
+    .text-content {
+      margin: 0;
+      font-size: 24px;
+    }
+  }
+}
