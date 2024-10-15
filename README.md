@@ -22,7 +22,7 @@ Com os demais instalados, as dependencias do `package.json` precisam ser instala
 # instalando as dependências
 $ yarn
 
-# Executando/compilando o projeto (localhost:8080)
+# Executando/compilando o projeto
 $ yarn serve
 
 # Buildando o projeto e minificando para produção
@@ -30,7 +30,4 @@ $ yarn build
 
 # Linters
 $ yarn lint
-
-# Testes unitários
-$ yarn test:unit
 ````
