@@ -6,7 +6,7 @@
 ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 
-#### Teste técnico realizado em Julho de 2022, com intuito de ingressar em uma vaga na empresa Talentify
+#### Teste técnico realizado em Julho de 2022, com intuito de ingressar em uma vaga na empresa [Talentify](https://www.talentify.io/)
 #### A aplicação desenvolvida tem como intuito exibir, cadastrar, editar e excluir uma lista de posts com base nos dados fornecida pela API REST GraphQL do [Gorest](https://gorest.co.in/). É necessário que além do CRUD básico, seja possível navegar pela aplicação para ler e comentar nas páginas individuais de cada post.
 
 #### Informações Adicionais:
